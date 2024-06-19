@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Engravers";
+    src: url("engravers.otf") format("opentype");
+}
+
+body {
+    font-family: "Engravers";
+    background-color: #fffbf9;
+    color: #715857;
+}
+
+.progressComp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.strikeout {
+    text-decoration: line-through;
+}
+
+.hide {
+    opacity: 0.2;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.fa-solid, .fa-regular{
+    border: none;
+    background-color: white;
+}
+
+#wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#addItem {
+    background-color: #fc3a09;
+    color: #fffbf9;
+    border: none;
+    font-family: "Engravers";
+    height: 2em;
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-bar {
+    background: #fc3a09;
+
+}
