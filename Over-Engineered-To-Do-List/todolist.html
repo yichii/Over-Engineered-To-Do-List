@@ -7,11 +7,15 @@
     <title>Todo List</title>
 
     <style>
-        #wrap {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        @font-face {
+            font-family: "Engravers";
+            src: url("engravers.otf") format("opentype");
+        }
+
+        body {
+            font-family: "Engravers";
+            background-color: #fffbf9;
+            color: #715857;
         }
 
         .progressComp {
@@ -22,10 +26,6 @@
 
         .strikeout {
             text-decoration: line-through;
-        }
-
-        body {
-            font-family: Engravers;
         }
 
         .hide {
@@ -42,18 +42,38 @@
             background-color: white;
         }
 
+        #wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #addItem {
+            background-color: #fc3a09;
+            color: #fffbf9;
+            border: none;
+            font-family: "Engravers";
+            height: 2em;
+            border-radius: 5px;
+        }
+
+        progress::-webkit-progress-bar {
+            background: #fc3a09;
+
+        }
     </style>
 </head>
 <body>
     <div id='wrap'>
         <h1 spellcheck='false' contenteditable='true'>Todo List</h1>
         <div>
-            <button>Add Item</button>
+            <button id="addItem">ADD</button>
             <input type='text'>
         </div>
         <div class='progressComp'>
-            <p>0%</p>
-            <progress value='0' max='100'></progress>
+            <h3>0%</h3>
+            <progress id="progress" value='0' max='100'></progress>
         </div>
         <ul id='list'></ul>
     </div>   
@@ -64,7 +84,7 @@
         const input = document.querySelector('input');
         const button = document.querySelector('button');
         const progress = document.querySelector('progress')
-        const progressText = document.querySelector('p')
+        const progressText = document.querySelector('h3')
         
         button.addEventListener('click', () => {
             if (input.value){
