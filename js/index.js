@@ -1,11 +1,28 @@
-const body = document.querySelector('body');
+const title = document.querySelector('h1');
 const list = document.querySelector('ul');
 const input = document.querySelector('input');
-const button = document.querySelector('button');
+const add = document.querySelector('button');
 const progress = document.querySelector('progress')
 const progressText = document.querySelector('h3')
 
-button.addEventListener('click', () => {
+title.addEventListener('keydown', (event) => {
+    if ( event.code === 'Enter' ) {
+        event.preventDefault();
+        title.blur();
+    }
+})
+
+input.onkeyup = (event) => {
+    if ( event.code === 'Enter' ) {
+        event.preventDefault();
+        createNewItem();
+        input.blur();
+    }
+};
+
+add.addEventListener('click', createNewItem);
+
+function createNewItem() {
     if (input.value){
         const item = document.createElement('div')
         const checkbox = document.createElement('input')
@@ -61,7 +78,15 @@ button.addEventListener('click', () => {
             item.classList.add = 'hide';
             updateProgress();
         })
-
+        
+        label.addEventListener('keydown', (event) => {
+            if ( event.code === 'Enter' ) {
+                event.preventDefault();
+                edit.className = 'fa-solid fa-pen-to-square';
+                label.contentEditable = false;
+            }
+        })
+        
         edit.addEventListener('click', () => {
             if (edit.classList.contains('fa-solid')){
                 edit.className = 'fa-regular fa-pen-to-square';
@@ -87,7 +112,7 @@ button.addEventListener('click', () => {
             updateProgress();
         })
     } else {}
-});
+}
 
 function updateProgress() {
     const checkedItems = document.querySelectorAll('#list input:checked').length;
