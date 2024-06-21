@@ -1,10 +1,14 @@
 @font-face {
-    font-family: "Engravers";
-    src: url("engravers.otf") format("opentype");
+    font-family: 'Engravers Gothic';
+    src: url('/public/EngraversGothicBT-Regular.woff2') format('woff2'),
+        url('/public/EngraversGothicBT-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 body {
-    font-family: "Engravers";
+    font-family: 'Engravers Gothic';
     background-color: #fffbf9;
     color: #715857;
 }
