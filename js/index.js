@@ -92,8 +92,13 @@ button.addEventListener('click', () => {
 function updateProgress() {
     const checkedItems = document.querySelectorAll('#list input:checked').length;
     const totalItems = list.childElementCount;
-    progress.value = (checkedItems/totalItems) * 100;
-    progressText.textContent = Math.floor(progress.value) + '%';
+    if (totalItems == 0) { // fixes the Nan progress value when dividing checkedItems by 0 items
+        progress.value = 0;
+        progressText.textContent = 0 + '%';
+    } else {
+        progress.value = (checkedItems/totalItems) * 100;
+        progressText.textContent = Math.floor(progress.value) + '%';
+    }
 }
 
 input.focus();
