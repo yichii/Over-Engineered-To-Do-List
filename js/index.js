@@ -4,7 +4,8 @@ const input = document.querySelector('input');
 const add = document.querySelector('#add');
 const progress = document.querySelector('progress')
 const progressText = document.querySelector('h3')
-const purge = document.querySelector('#purge')
+const cleanse = document.querySelector('#cleanse')
+const removeChecked = document.querySelector('#removeChecked')
 
 title.addEventListener('keydown', (event) => {
     if ( event.code === 'Enter' ) {
@@ -22,8 +23,15 @@ input.onkeyup = (event) => {
 
 add.addEventListener('click', createNewItem);
 
-purge.addEventListener('click', () => {
+clear.addEventListener('click', () => {
     list.replaceChildren();
+    updateProgress();
+})
+
+cleanse.addEventListener('click', () => {
+    document.querySelectorAll('#list input:checked').forEach((item) => {
+        list.removeChild(item.parentElement)
+    })
     updateProgress();
 })
 
