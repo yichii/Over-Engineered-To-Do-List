@@ -13,6 +13,20 @@ body {
     color: #715857;
 }
 
+button {
+    font-family: 'Engravers Gothic';
+    background-color: #fc3a09;
+    color: #fffbf9;
+    border: none;
+    height: 2em;
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-bar {
+    background: #fc3a09;
+
+}
+
 .progressComp {
     display: flex;
     flex-direction: row;
@@ -27,14 +41,15 @@ body {
     opacity: 0.2;
 }
 
-ul {
-    display: flex;
-    flex-direction: column;
-}
-
 .fa-solid, .fa-regular{
     border: none;
     background-color: white;
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
 }
 
 #wrap {
@@ -44,16 +59,12 @@ ul {
     align-items: center;
 }
 
-#addItem {
-    background-color: #fc3a09;
-    color: #fffbf9;
-    border: none;
-    font-family: "Engravers";
-    height: 2em;
-    border-radius: 5px;
+#add {
+    background-color: #fe6213;
 }
 
-progress::-webkit-progress-bar {
-    background: #fc3a09;
-
+#purge {
+    background-color: #6c5352;
 }
+
+

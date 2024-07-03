@@ -10,12 +10,13 @@
     <div id='wrap'>
         <h1 spellcheck='false' contenteditable='true'>Todo List</h1>
         <div>
-            <button id="addItem">ADD</button>
-            <input type='text'>
+            <button id="add">ADD</button>
+            <input maxlength="50" type='text'>
+            <button id="purge">PURGE</button>
         </div>
         <div class='progressComp'>
             <h3>0%</h3>
-            <progress id="progress" value='0' max='100'></progress>
+            <progress value='0' max='100'></progress>
         </div>
         <ul id='list'></ul>
     </div>   

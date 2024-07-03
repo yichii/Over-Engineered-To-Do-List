@@ -1,9 +1,10 @@
 const title = document.querySelector('h1');
 const list = document.querySelector('ul');
 const input = document.querySelector('input');
-const add = document.querySelector('button');
+const add = document.querySelector('#add');
 const progress = document.querySelector('progress')
 const progressText = document.querySelector('h3')
+const purge = document.querySelector('#purge')
 
 title.addEventListener('keydown', (event) => {
     if ( event.code === 'Enter' ) {
@@ -16,11 +17,15 @@ input.onkeyup = (event) => {
     if ( event.code === 'Enter' ) {
         event.preventDefault();
         createNewItem();
-        input.blur();
     }
 };
 
 add.addEventListener('click', createNewItem);
+
+purge.addEventListener('click', () => {
+    list.replaceChildren();
+    updateProgress();
+})
 
 function createNewItem() {
     if (input.value){
@@ -84,6 +89,7 @@ function createNewItem() {
                 event.preventDefault();
                 edit.className = 'fa-solid fa-pen-to-square';
                 label.contentEditable = false;
+                label.blur();
             }
         })
         
