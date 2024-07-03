@@ -16,7 +16,7 @@ body {
 button {
     font-family: 'Engravers Gothic';
     background-color: #fc3a09;
-    color: #fffbf9;
+    /* color: #fffbf9; */
     border: none;
     height: 2em;
     border-radius: 5px;
@@ -61,10 +61,16 @@ progress::-webkit-progress-bar {
 
 #add {
     background-color: #fe6213;
+    color: black
 }
 
 #clear {
     background-color: #6c5352;
+    color: black
 }
 
+#cleanse {
+    background-color: #fe6213;
+    color: black
+}
 
