@@ -8,18 +8,27 @@
 </head>
 <body>
     <div id='wrap'>
-        <h1 spellcheck='false' contenteditable='true'>Todo List</h1>
-        <div>
-            <button id="add">ADD</button>
-            <input maxlength="50" type='text'>
-            <button id="clear">CLEAR</button>
-            <button id="cleanse">ClEANSE</button>
+        <div class="divOne">
+            <h1 id="title" spellcheck='false' contenteditable='true'>Todo List</h1>
+            <h2 id="japanese">やることリスト</h2>
+            <h2 id="subheading">Over-Engineered Todo List</h2>            
         </div>
-        <div class='progressComp'>
+        <div class="divTwo">
+            <input id="newItemForm" maxlength="50" type='text'>
             <h3>0%</h3>
             <progress value='0' max='100'></progress>
         </div>
-        <ul id='list'></ul>
+        <div class="divThree">
+            <div class="divThreeOne">
+                <button class="menuButton" id="add">ADD</button>
+                <button class="menuButton" id="clear">CLEAR</button>
+                <button class="menuButton" id="cleanse">CLEANSE</button>
+            </div>
+            <div class="divThreeTwo">
+                <ul id='list'></ul> 
+            </div>
+        </div>
+        
     </div>   
     <script src='https://kit.fontawesome.com/877a08a96e.js' crossorigin='anonymous'></script>
     <script src="js/index.js" type="text/javascript"></script>

@@ -7,6 +7,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Daytona Pro Light';
+    src: url('/public/DaytonaPro-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     font-family: 'Engravers Gothic';
     background-color: #fffbf9;
@@ -16,21 +24,10 @@ body {
 button {
     font-family: 'Engravers Gothic';
     background-color: #fc3a09;
-    /* color: #fffbf9; */
+    cursor: pointer;
     border: none;
     height: 2em;
     border-radius: 5px;
-}
-
-progress::-webkit-progress-bar {
-    background: #fc3a09;
-
-}
-
-.progressComp {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 
 .strikeout {
@@ -44,6 +41,31 @@ progress::-webkit-progress-bar {
 .fa-solid, .fa-regular{
     border: none;
     background-color: white;
+}
+
+.menuButton {
+    border: 3px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    
+}
+
+.menuButton:hover, .menuButton-5:focus {
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+#title {
+    font-family: 'Daytona Pro Light';
+    margin: 0;
+}
+
+#japanese {
+    color:#fe6213;
+    margin: 0;
+}
+
+#subheading {
+    margin-top: 50px;
 }
 
 #list {
@@ -61,16 +83,53 @@ progress::-webkit-progress-bar {
 
 #add {
     background-color: #fe6213;
-    color: black
+    color: white;
 }
 
 #clear {
-    background-color: #6c5352;
-    color: black
+    background-color: #86686b;
+    color: white;
 }
 
 #cleanse {
-    background-color: #fe6213;
-    color: black
+    background-color: #fffbf9;
+    color: black;
+    border: 0.3px solid;
 }
 
+#newItemForm {
+    color: white;
+    background: #1e1010;
+    justify-items: center;
+    border: none;
+}
+
+#newItemForm:focus {
+    border-color: #1e1010;
+}
+
+.divOne {
+    width: 100%;
+    display: flex;
+    padding-left: 45px;
+    flex-direction: column;
+    align-items: start;
+}
+
+.divTwo {
+    background: #1e1010;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    width: 100vw;
+}
+
+.divThree {
+    margin-top: 20px;
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: center;
+}

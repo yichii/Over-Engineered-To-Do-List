@@ -140,4 +140,4 @@ function updateProgress() {
     }
 }
 
-input.focus();
+title.focus();
